@@ -6,7 +6,7 @@
 // @author             JetpackCat
 // @namespace          https://github.com/JetpackCat-IT/libib-custom-status-style
 // @supportURL         https://github.com/JetpackCat-IT/libib-custom-status-style/issues
-// @version            1.0.0
+// @version            0.0.1pre
 // @license            GPL-3.0
 // @match              https://www.libib.com/library
 // @icon               https://www.libib.com/img/favicon.png
