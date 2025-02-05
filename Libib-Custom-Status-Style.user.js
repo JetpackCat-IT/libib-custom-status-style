@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name               Libib - Custom status style
-// @name:it            Libib - Stile stati personalizzato
-// @description        Set a custom color and style for libib.com item status
-// @description:it     Modifica i colori e lo stile dello stato di un oggetto di libib.com
+// @name               Libib - Custom status indicator style
+// @name:it            Libib - Stile indicatore stato personalizzato
+// @description        Set a custom color and style for libib.com item status indicator
+// @description:it     Modifica i colori e lo stile dell'indicatore dello stato di un oggetto di libib.com
 // @author             JetpackCat
 // @namespace          https://github.com/JetpackCat-IT/libib-custom-status-style
 // @supportURL         https://github.com/JetpackCat-IT/libib-custom-status-style/issues
@@ -28,7 +28,7 @@
   // Create the element, it needs to be an <a> tag inside an <li> tag
   const settings_button_a = document.createElement("a");
   settings_button_a.appendChild(
-    document.createTextNode("Reading status settings")
+    document.createTextNode("Libib status settings")
   );
 
   // Create <li> element and insert <a> element inside
@@ -114,7 +114,7 @@
     fields: {
       // This is the id of the field
       type: {
-        label: "Reading status type", // Appears next to field
+        label: "Indicator type", // Appears next to field
         type: "radio", // Makes this setting a radio field
         options: ["Triangle", "Border"], // Default = triangle
         default: "Triangle", // Default value if user doesn't change it
@@ -351,7 +351,7 @@
   const setCustomStyle = function (css) {
     // Remove existing style if present
     const existingStyle = document.getElementById(
-      "libib-custom-reading-status-style"
+      "libib-custom-status-indicator-style"
     );
     if (existingStyle != null) {
       existingStyle.remove();
@@ -361,7 +361,7 @@
     document.head.append(
       Object.assign(document.createElement("style"), {
         type: "text/css",
-        id: "libib-custom-reading-status-style",
+        id: "libib-custom-status-indicator-style",
         textContent: css,
       })
     );
