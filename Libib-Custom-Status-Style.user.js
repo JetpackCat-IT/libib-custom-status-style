@@ -6,7 +6,8 @@
 // @author             JetpackCat
 // @namespace          https://github.com/JetpackCat-IT/libib-custom-status-style
 // @supportURL         https://github.com/JetpackCat-IT/libib-custom-status-style/issues
-// @version            0.0.1pre
+// @icon               https://github.com/JetpackCat-IT/libib-custom-status-style/raw/v1.0.0/img/icon_64.png
+// @version            1.0.0
 // @license            GPL-3.0
 // @match              https://www.libib.com/library
 // @icon               https://www.libib.com/img/favicon.png
@@ -16,6 +17,8 @@
 // @grant              GM_setValue
 // @grant              GM.getValue
 // @grant              GM.setValue
+// @downloadURL        https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.user.js
+// @updateURL          https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.meta.js
 
 // ==/UserScript==
 
