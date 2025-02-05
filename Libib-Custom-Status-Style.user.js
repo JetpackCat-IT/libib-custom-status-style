@@ -10,7 +10,7 @@
 // @license            GPL-3.0
 // @match              https://www.libib.com/library
 // @icon               https://www.libib.com/img/favicon.png
-// @run-at             document-start
+// @run-at             document-idle
 // @require            https://openuserjs.org/src/libs/sizzle/GM_config.js
 // @grant              GM_getValue
 // @grant              GM_setValue
