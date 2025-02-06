@@ -182,8 +182,8 @@
         default: "Top", // Default value if user doesn't change it
       },
       // This is the id of the field
-      borderWidth: {
-        label: "Border width", // Appears next to field
+      borderHeight: {
+        label: "Border height", // Appears next to field
         type: "number", // Makes this setting a select field
         default: 5, // Default value if user doesn't change it
       },
@@ -364,13 +364,13 @@
       }
     } else if (GM_settings.get("type") == "Border") {
       let border_position = GM_settings.get("borderPosition");
-      let border_width = GM_settings.get("borderWidth");
+      let border_height = GM_settings.get("borderHeight");
       // The box-shadow prevents the click on the item, so it needs to be hidden on hover
       css_style += `
             .cover-wrapper {
                 --shadow-y: ${
                   border_position == "Top" ? `` : `-`
-                }${border_width}px;
+                }${border_height}px;
             }
             .cover-wrapper:hover::after {
                 display:none!important;
