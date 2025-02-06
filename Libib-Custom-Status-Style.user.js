@@ -7,8 +7,8 @@
 // @namespace          https://github.com/JetpackCat-IT/libib-custom-status-style
 // @supportURL         https://github.com/JetpackCat-IT/libib-custom-status-style/issues
 // @icon               https://github.com/JetpackCat-IT/libib-custom-status-style/raw/v1.0.0/img/icon_64.png
-// @version            1.0.0
-// @license            GPL-3.0
+// @version            1.1.0
+// @license            GPL-3.0-or-later; https://raw.githubusercontent.com/JetpackCat-IT/libib-custom-status-style/master/LICENSE
 // @match              https://www.libib.com/library
 // @icon               https://www.libib.com/img/favicon.png
 // @run-at             document-idle
@@ -19,7 +19,6 @@
 // @grant              GM.setValue
 // @downloadURL        https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.user.js
 // @updateURL          https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.meta.js
-
 // ==/UserScript==
 
 (function () {
@@ -112,6 +111,52 @@
           input.value = this.default;
         },
       },
+      number: {
+        default: null,
+        toNode: function () {
+          var field = this.settings,
+            value = this.value,
+            id = this.id,
+            create = this.create,
+            slash = null,
+            retNode = create("div", {
+              className: "config_var",
+              id: this.configId + "_" + id + "_var",
+              title: field.title || "",
+            });
+
+          // Create the field lable
+          retNode.appendChild(
+            create("label", {
+              innerHTML: field.label,
+              id: this.configId + "_" + id + "_field_label",
+              for: this.configId + "_field_" + id,
+              className: "field_label",
+            })
+          );
+          // Create the actual input element
+          var props = {
+            id: this.configId + "_field_" + id,
+            type: "number",
+            value: value ?? "",
+          };
+          // Actually create and append the input element
+          retNode.appendChild(create("input", props));
+          return retNode;
+        },
+        toValue: function () {
+          let input = document.getElementById(
+            `${this.configId}_field_${this.id}`
+          );
+          return input.value;
+        },
+        reset: function () {
+          let input = document.getElementById(
+            `${this.configId}_field_${this.id}`
+          );
+          input.value = this.default;
+        },
+      },
     },
     // Fields object
     fields: {
@@ -135,6 +180,12 @@
         type: "select", // Makes this setting a select field
         options: ["Top", "Bottom"],
         default: "Top", // Default value if user doesn't change it
+      },
+      // This is the id of the field
+      borderWidth: {
+        label: "Border width", // Appears next to field
+        type: "number", // Makes this setting a select field
+        default: 5, // Default value if user doesn't change it
       },
       // This is the id of the field
       colorNotBegun: {
@@ -313,10 +364,13 @@
       }
     } else if (GM_settings.get("type") == "Border") {
       let border_position = GM_settings.get("borderPosition");
+      let border_width = GM_settings.get("borderWidth");
       // The box-shadow prevents the click on the item, so it needs to be hidden on hover
       css_style += `
             .cover-wrapper {
-                --shadow-y: ${border_position == "Top" ? "5px" : "-5px"};
+                --shadow-y: ${
+                  border_position == "Top" ? `` : `-`
+                }${border_width}px;
             }
             .cover-wrapper:hover::after {
                 display:none!important;
