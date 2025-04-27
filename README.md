@@ -31,7 +31,20 @@ Mirrors:
 ![Window settings](img/readme/script-settings-2.png)
 
 You can choose between **Triangle** (default) or **Border**, you can also choose the position of the indicator.
+If you choose the **Border** style, you can also choose the thickness
 
 Here are all the possible combinations:
 
 ![All combinations](img/readme/all-combination.png)
+
+In addition, you can also **blur** the cover of specific series (also known as groups).
+You can do this in two way:
+1. By clicking the **flag** icon on the item cover
+![Blur button](img/readme/blur-1.png)
+2. By adding manually the series name in the options
+![Blur option](img/readme/blur-3.png)
+
+Note that this option will blur **the entire series**
+![Blur series](img/readme/blur-2.png)
+
+If you use this script on multiple computers and want to transfer the settings, you can use the **Copy and Paste settings** buttons at the bottom of the settings page (see image above)
