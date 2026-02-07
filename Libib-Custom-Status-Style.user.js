@@ -276,8 +276,12 @@
 
                   // Loop each settings and save
                   options.forEach(el => {
-                      gmc.set(el.id, el.value);
+                      if (gmc.fields[el.id]) {
+                          gmc.fields[el.id].value = el.value;
+                      }
                   });
+                  // Close panel
+                  gmc.close();
                   // Save settings
                   gmc.save();
               }
