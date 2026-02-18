@@ -13,8 +13,8 @@ Here you can see a before and after:\
 
 ## How to install
 
-1. Install a Userscript Manager like [Tampermonkey](https://www.tampermonkey.net/)
-2. Install **Libib - Custom status indicator style** by clicking **[here](../../raw/v1.0.0/Libib-Custom-Status-Style.user.js)**
+1. Install a Userscript Manager like [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/)
+2. Install **Libib - Custom status indicator style** by clicking **[here](https://raw.githubusercontent.com/JetpackCat-IT/libib-custom-status-style/main/Libib-Custom-Status-Style.user.js)**
 
 Mirrors:
 
@@ -26,9 +26,9 @@ Mirrors:
 
 1. Access your library on [libib.com](https://libib.com/library)
 2. You should see a new menu item on the sidebar called **"Libib status settings"**
-![Sidebar settings](img/readme/script-settings-1.png)
+   ![Sidebar settings](img/readme/script-settings-1.png)
 3. After clicking it, a window will open, in this window you can change the settings as you like
-![Window settings](img/readme/script-settings-2.png)
+   ![Window settings](img/readme/script-settings-2.png)
 
 You can choose between **Triangle** (default) or **Border**, you can also choose the position of the indicator.
 If you choose the **Border** style, you can also choose the thickness
@@ -39,10 +39,11 @@ Here are all the possible combinations:
 
 In addition, you can also **blur** the cover of specific series (also known as groups).
 You can do this in two way:
+
 1. By clicking the **flag** icon on the item cover
-![Blur button](img/readme/blur-1.png)
+   ![Blur button](img/readme/blur-1.png)
 2. By adding manually the series name in the options
-![Blur option](img/readme/blur-3.png)
+   ![Blur option](img/readme/blur-3.png)
 
 Note that this option will blur **the entire series**
 ![Blur series](img/readme/blur-2.png)

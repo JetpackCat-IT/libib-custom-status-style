@@ -6,8 +6,8 @@
 // @author             JetpackCat
 // @namespace          https://github.com/JetpackCat-IT/libib-custom-status-style
 // @supportURL         https://github.com/JetpackCat-IT/libib-custom-status-style/issues
-// @icon               https://github.com/JetpackCat-IT/libib-custom-status-style/raw/v1.0.0/img/icon_64.png
-// @version            2.0.0
+// @icon               https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style/img/icon_64.png
+// @version            2.1.0
 // @license            GPL-3.0-or-later; https://raw.githubusercontent.com/JetpackCat-IT/libib-custom-status-style/master/LICENSE
 // @match              https://www.libib.com/library
 // @icon               https://www.libib.com/img/favicon.png
@@ -17,12 +17,35 @@
 // @grant              GM_setValue
 // @grant              GM.getValue
 // @grant              GM.setValue
-// @downloadURL        https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.user.js
-// @updateURL          https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.meta.js
+// @downloadURL https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.user.js
+// @updateURL https://update.greasyfork.org/scripts/526007/Libib%20-%20Custom%20status%20indicator%20style.meta.js
 // ==/UserScript==
 
 (function () {
   "use strict";
+
+  const COG_SVG = 'https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style/img/assets/cog.svg';
+  
+  // CSS for script items
+  const script_css_style = `
+    #libib-status-settings-link>a {
+        text-decoration: underline;
+    }
+    ul#primary-menu li#libib-status-settings-link a.active  {
+        text-indent: 0px; !important;
+    }
+    ul#primary-menu li#libib-status-settings-link:hover a.active  {
+        text-indent: 35px !important;
+    }
+    li#libib-status-settings-link a:hover {
+        background: url('${COG_SVG}') no-repeat left 40px center #fff;
+        background-size: 20px auto;
+    }
+    .dark li#libib-status-settings-link a:hover {
+        background: url('${COG_SVG}') no-repeat left 40px center #1b1b1b;
+        background-size: 20px auto;
+    }
+  `;
 
   // Get libib sidebar menu. The settings button will be added to the sidebar
   const libib_sidebar_menu = document.getElementById("primary-menu");
@@ -30,11 +53,12 @@
   // Create the element, it needs to be an <a> tag inside an <li> tag
   const settings_button_a = document.createElement("a");
   settings_button_a.appendChild(
-      document.createTextNode("Libib status settings")
+      document.createTextNode("Status settings")
   );
 
   // Create <li> element and insert <a> element inside
   const settings_button_li = document.createElement("li");
+  settings_button_li.id = "libib-status-settings-link"
   settings_button_li.appendChild(settings_button_a);
 
   // Assign click event handler to open the menu settings
@@ -341,6 +365,8 @@
       const no_blur_on_hover = GM_settings.get("noBlurOnHover");
 
       let css_style = "";
+
+      css_style += script_css_style;
       // Make libib buttons still clickable
       css_style += `
       .quick-edit-link{
