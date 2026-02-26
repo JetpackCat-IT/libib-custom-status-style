@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      margin-top: 2em;
+    }
+  </style>
+</head>
+<body>
+<h1>Privacy Policy for "Libib - Custom status indicator style"</h1>
+
+<p><b>Effective Date</b>: February 26, 2026</p>
+
+<p>This Privacy Policy explains how the "Libib - Custom status indicator style" userscript ("the Script") collects, uses, and protects your data when you use the optional "Cloud Sync" feature.</p>
+
+<h2>1. Data Controller</h2>
+<p>
+The developer of this open-source script acts as the Data Controller. You can contact the developer via <a href="https://github.com/JetpackCat-IT/libib-custom-status-style/issues" target="_blank">GitHub Issues</a>.
+</p>
+
+<h2>2. What Data We Collect</h2>
+<p>
+The Script operates entirely on your local browser by default. However, if you explicitly choose to use the "Cloud Sync" feature, we collect and store the following data:
+    <ul>
+        <li>Sync ID: A randomly generated, anonymous Unique Identifier (UUID v4) created by your browser.</li>
+        <li>UI Preferences: Your selected settings, including indicator types, colors (hex codes), border heights, and the text strings of the groups you have chosen to blur.</li>
+    </ul>
+</p>
+<p><b>What we DO NOT collect</b>: We do not collect your name, email address, Libib account credentials, or the contents of your library. We do not actively collect or store your IP address in our database (though it is processed by our hosting provider, as explained in Section 5).</p>
+
+<h2>3. How We Use Your Data</h2>
+<p>The collected data is used strictly and solely to provide the Cloud Sync functionality, allowing you to save your UI preferences and restore them on another device using your anonymous Sync ID.</p>
+
+<h2>4. Legal Basis for Processing (GDPR Compliance)</h2>
+<p>If you are located in the European Economic Area (EEA), our legal basis for collecting and processing this data is your explicit consent (Art. 6(1)(a) GDPR). The data is only transmitted and saved when you manually click the "Save and Sync to Cloud" button.</p>
+
+<h2>5. Data Storage and Third-Party Services</h2>
+<p>
+The data is stored securely using Cloudflare Workers KV, a global cloud network. By using the Cloud Sync feature, you acknowledge that your anonymous Sync ID and UI preferences will be processed on Cloudflare's servers.
+Note on Network Data: While the Script itself does not store your IP address, Cloudflare automatically processes and temporarily logs standard network data (such as IP addresses and browser user-agent strings) to route traffic securely and prevent malicious attacks (e.g., DDoS protection). This infrastructure-level processing is governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare's Privacy Policy</a>.
+</p>
+
+<h2>6. Data Retention</h2>
+<p>Your data is stored indefinitely on the Cloudflare KV database to ensure your settings are available whenever you need to sync them. You can completely and permanently delete your data at any time (see Section 7).</p>
+
+<h2>7. Your Rights</h2>
+
+<p>
+Under the GDPR and other privacy laws, you have the right to access, modify, and delete your data. Because the Script does not tie your data to an identity (only to the Sync ID), you can exercise these rights directly within the Script's interface:
+    <ul>
+        <li>Access & Modify: You can load your settings from the cloud, modify them, and click "Save and Sync to Cloud" to overwrite the existing data.</li>
+        <li>Delete: You can permanently erase your data from our servers by clicking the "Delete from Cloud" button in the Script's settings panel. Once deleted, it cannot be recovered.</li>
+    </ul>
+</p>
+
+<h2>8. Changes to this Policy</h2>
+<p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Effective Date".</p>
+
+</body>
+</html>
