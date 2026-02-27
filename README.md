@@ -15,8 +15,10 @@ The core logic, architecture, and overall development of this script are entirel
 Libib.com is a great website to keep track of your collection of books, CDs and other things.
 Unfortunately the status indicator's color selection is not great and this makes it hard to see if you already read a book or not.
 
-Here you can see a before and after:\
-![Before](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/before.png)\
+Here you can see a before and after:
+
+![Before](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/before.png)
+
 ![After](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/after.png)
 
 ## How to install
@@ -36,8 +38,11 @@ Mirrors:
 
 1. Access your library on [libib.com](https://libib.com/library)
 2. You should see a new menu item on the sidebar called **"Status settings"**
+
    ![Sidebar settings](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/script-settings-1.png)
+
 3. After clicking it, a panel will open, in this panel you can change the settings as you like
+
    ![Panel settings](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/script-settings-2.png)
 
 You can choose between **Triangle** (default) or **Border**, you can also choose the position of the indicator.
@@ -53,11 +58,15 @@ In addition, you can also **blur** the cover of specific series (also known as g
 You can do this in two ways:
 
 1. By clicking the **eye** icon on the item cover
+
    ![Blur button](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/blur-1.png)
+
 2. By manually adding the series name in the options
+
    ![Blur option](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/blur-3.png)
 
 Note that this option will blur **the entire series**
+
 ![Blur series](https://cdn.jsdelivr.net/gh/JetpackCat-IT/libib-custom-status-style@main/img/readme/blur-2.png)
 
 ### Sync settings
